@@ -1,0 +1,7 @@
+/* Stylesheet by Tobin McGilligan, 2015 */
+body {
+	margin: 0;
+}
+#map {
+	height: 100vh;
+}
