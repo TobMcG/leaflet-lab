@@ -39,29 +39,31 @@ function onEachFeature(feature, layer) {
 
 //function to retrieve the data and place it on the map
 function getData(map){
+
+    var geojsonMarkerOptions = {
+        radius: 8,
+        fillColor: "#ff7800",
+        color: "#000",
+        weight: 1,
+        opacity: 1,
+        fillOpacity: 0.8
+    };
+
+    var geoJsonFunctionOptions = {
+        pointToLayer: function (feature, latlng){
+            return L.circleMarker(latlng, geojsonMarkerOptions);
+        },
+        onEachFeature: onEachFeature,
+        filter: function(feature, layer) {
+            return feature.properties.Pop_2015 > 20;
+        },
+    };
+
     $.ajax("data/MegaCities.geojson", {
         dataType: "json",
         success: function(response){
-            //create marker options
-            var geojsonMarkerOptions = {
-                radius: 8,
-                fillColor: "#ff7800",
-                color: "#000",
-                weight: 1,
-                opacity: 1,
-                fillOpacity: 0.8
-            };
-
             //create a Leaflet GeoJSON layer and add it to the map
-            L.geoJson(response, {
-                pointToLayer: function (feature, latlng){
-                    return L.circleMarker(latlng, geojsonMarkerOptions);
-                },
-                onEachFeature: onEachFeature,
-                filter: function(feature, layer) {
-                    return feature.properties.Pop_2015 > 20;
-                },
-            }).addTo(map);
+            L.geoJson(response, geoJsonFunctionOptions).addTo(map);
         }
     });
 };

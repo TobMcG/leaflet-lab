@@ -5,3 +5,68 @@ body {
 #map {
 	height: 100vh;
 }
+.leaflet-popup-content {
+	margin: 16px 22px;
+}
+.leaflet-popup-content strong {
+	font-size: 16px;
+}
+.popupAttributeLabel {
+	text-decoration: underline;
+}
+.popupAttributeValue {
+	font-size: 36px;
+}
+#slider {
+	background: #fff;
+	border: 2px solid rgba(0,0,0,0.2);
+	z-index: 10;
+	width: 280px;
+	position: absolute;
+	top: 60px;
+	right: 20px;
+}
+#slider span {
+	background: #000;
+	border: none;
+}
+#slider-buttons {
+	text-align: center;
+	z-index: 10;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 28px;
+	border: 2px solid rgba(0,0,0,0.2);
+	border-radius: 4px;
+}
+#slider-buttons .fa {
+	padding: 5px 18.6px;
+	background: #fff;
+	border-right: 1px solid #ccc;
+}
+#slider-buttons .fa:last-child {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-right: none;
+}
+#slider-buttons .fa:first-child {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.moreInfo {
+	background: #fff;
+	border: 2px solid rgba(0,0,0,0.2);
+}
+.moreInfo .ui-dialog-titlebar {
+	background: #ff7800;
+	opacity: 0.8;
+	border: 1px solid #000;
+}
+.moreInfo .ui-dialog-titlebar .ui-button {
+	background: #fff;
+	border: 1px solid #ccc;
+}
+.moreInfo .ui-dialog-titlebar .ui-button .ui-icon {
+	background-image: url("../lib/jquery/jquery-ui-1.11.4/images/ui-icons_222222_256x240.png");
+}
