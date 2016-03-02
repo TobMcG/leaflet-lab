@@ -54,19 +54,101 @@ body {
 	border-top-left-radius: 4px;
 	border-bottom-left-radius: 4px;
 }
-.moreInfo {
+.legend {
 	background: #fff;
 	border: 2px solid rgba(0,0,0,0.2);
 }
-.moreInfo .ui-dialog-titlebar {
+.legend .ui-dialog-titlebar {
 	background: #ff7800;
-	opacity: 0.8;
+	opacity: 1;
 	border: 1px solid #000;
 }
-.moreInfo .ui-dialog-titlebar .ui-button {
+.legend .ui-dialog-titlebar .ui-button {
 	background: #fff;
 	border: 1px solid #ccc;
 }
-.moreInfo .ui-dialog-titlebar .ui-button .ui-icon {
+.legend .ui-dialog-titlebar .ui-button .ui-icon {
 	background-image: url("../lib/jquery/jquery-ui-1.11.4/images/ui-icons_222222_256x240.png");
+}
+#symbolizationPicker {
+	margin-left: 15px;
+}
+#symbolizationPicker label span {
+	font-size: 0.75em;
+}
+.ui-widget-header .ui-state-hover {
+	color: #ff7800;
+}
+#legendFlexContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 5px;
+}
+#legendSymbols {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.circle {
+	background: #ff7800;
+	border-radius: 50%;
+	border: 1px solid #000;
+	width: 14px;
+	height: 14px;
+}
+#attributeContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-right: 25px;
+}
+.legendRow {
+	margin-top: 5px;
+	/* NOTE: if 'margin-bottom' is also specified here, the legend
+	will be wonky, b/c the top and bottom margins on the label will
+	collapse, but not the circle symbol */
+}
+.s3 {
+	width: 45px;
+	height: 45px;
+}
+.s2 {
+	width: 30px;
+	height: 30px;
+}
+.s1 {
+	width: 15px;
+	height: 15px;
+}
+.c5 {
+	background-color: #feedde;
+	height: 14px;
+}
+.c4 {
+	background-color: #fdbe85;
+	height: 14px;
+}
+.c3 {
+	background-color: #fd8d3c;
+	height: 14px;
+}
+.c2 {
+	background-color: #e6550d;
+	height: 14px;
+}
+.c1 {
+	background-color: #a63603;
+	height: 14px;
+}
+.label {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 1px 0px; /* accounts for border of circle marker */
+	margin-left: 10px;
+	background-color: #fff;
+}
+#attrField {
+	font-weight: bold;
 }
