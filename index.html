@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width">
-		<title>GEOG575 Class</title>
+		<title>GEOG 575</title>
 
 		<!-- External Stylesheets -->
 		<link rel="stylesheet" href="lib/leaflet/leaflet.css">
@@ -20,21 +20,23 @@
 
 	<body>
 
-		<div id="dialog" title="Map Legend">
-			<!--<span style="padding: 0px 15px;">|</span>-->
+		<div id="title">
+			<span>Price-to-Rent Ratios</span>
+			<span class="fa fa-question-circle" title></span>
+			</br>for select U.S. cities, October 2010 through December 2015
 		</div>
-		<div id="slider"></div>
-		<div id="slider-buttons">
-			<span class="fa fa-fast-backward"></span><!--
-			--><span class="fa fa-step-backward"></span><!--
-			--><span class="fa fa-play"></span><!--
-			--><span class="fa fa-step-forward"></span><!--
-			--><span class="fa fa-fast-forward"></span>
+		<div id="dialog" title="Map Legend"></div>
+		<div id="slider-control">
+			<div id="slider-buttons">
+				<span class="fa fa-fast-backward"></span><!--
+				--><span class="fa fa-step-backward"></span><!--
+				--><span class="fa fa-play"></span><!--
+				--><span class="fa fa-step-forward"></span><!--
+				--><span class="fa fa-fast-forward"></span>
+			</div>
+			<div id="slider"></div>
 		</div>
 	    <div id="map"></div>
-			
-		<!--you can also use this space for internal scripts or stylesheets;
-		place these within <script> or <style> tags-->
 
 		<!-- External Scripts-->
 		<script type="text/javascript" src="lib/leaflet/leaflet-src.js"></script>
@@ -42,8 +44,7 @@
 		<script type="text/javascript" src="lib/jquery/jquery-1.12.0.min.js"></script>
 		<script src="lib/jquery/jquery-ui-1.11.4/jquery-ui.min.js"></script>
 		<!-- Internal Scripts -->
-		<!--<script type="text/javascript" src="js/tutorials.js"></script>-->
-		<!--<script type="text/javascript" src="js/main.js"></script>-->
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/mapDataSetup.js"></script>
+		<script type="text/javascript" src="js/mapControlsSetup.js"></script>
 	</body>
 </html>
