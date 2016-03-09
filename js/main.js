@@ -252,7 +252,6 @@ function setupElements(map, attributes) {
     });
   }
 
-  // FIFTH INTERACTION OPERATOR
   function updateProportionalSymbolsOneLayer(layer, attribute) {
     //access feature properties
     var props = layer.feature.properties;
